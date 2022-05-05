@@ -1,0 +1,92 @@
+{% extends 'main/base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+<body style="background-color: rgb(196, 212, 169);"></body>
+ <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.ess"
+    integrity="sha384-gg0yR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+
+
+<br>
+
+{% block content %}
+
+    <img src="https://e-history.kz/media/upload/2065/2015/05/26/47ceaa7fd7c502a1ae73a8e969327a65.jpg" alt="sports" width="1100" height="550">
+
+
+
+
+    {% if tasks %}
+    {% for el in tasks %}
+        <div class="alert alert-warning mt-2">
+            <h4>{{ el.title }}</h4>
+            <p>{{ el.tasks }}</p>
+        </div>
+     {% endfor %}
+  {% else %}
+     <p>We don't have no records</p>
+  {% endif %}
+
+
+
+
+<style>
+    table, th, td {
+    border: 1px solid black;
+    }
+    table{
+        width: 80%;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        background-color: rgb(196, 212, 169);
+    }
+    td{
+        height: 50px;
+    }
+</style>
+   <table style="border-radius: 10px;">
+    <tr style="background-color: white; color: rgb(24, 22, 26);">
+      <th>#</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Ingredients</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Beshbarmak</td>
+      <td>3.500tg</td>
+      <td>Finely hopped boiled meat, mixed with noodles and chyk</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Shelpek</td>
+      <td>700tg</td>
+      <td>Flour - 500 g; Water - 200 ml; Salt - 1 tsp. Vegetable oil - 200 ml</td>
+
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Baursaks</td>
+      <td>400tg</td>
+      <td>2 cups flour · 1 Tablespoon yeast · 1/4 cup water · 1/4 cup milk · 1 egg · 1 Tablespoon butter or margarine </tr>
+
+  </tr>
+    <tr>
+      <td>4</td>
+      <td>Kurt</td>
+      <td>100tg</td>
+      <td>One kurt ball with a diameter of 1 cm is equivalent to 100 g of milk. Kurt contains high-grade milk proteins, biologically active substances, carbohydrates, enzymes, microelements (calcium) and vitamins (A, E, D).</td>
+    </tr>
+  </table>
+
+<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">THE BEST OF KAZAKH CUISINE</h1>
+      <p class="lead my-3">The nomadic lifestyle made raising crops difficult so meat has always formed the biggest part of the Kazakh diet. Mutton and beef were considered everyday food while horse and camel were regarded as festival meats. Horse and mutton are the most popular proteins in Kazakh cuisine and figure prominently in many dishes, including Beshbarmak, the Kazakh national dish.</p>
+      <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+    </div>
+  </div>
+{% endblock %}
+
